@@ -1,0 +1,88 @@
+\documentclass[10pt,a4paper]{article}
+
+\usepackage[top=2cm, bottom=2cm, left=2.5cm, right=2cm]{geometry}
+% graphics images
+\usepackage[pdftex]{graphicx}
+\usepackage[toc,page]{appendix}
+\usepackage{slashbox}
+% 1.5 line spacing
+\usepackage{setspace}
+\usepackage{tabu}
+\usepackage{tabularx}
+\onehalfspacing
+% maths symbols
+\usepackage{amsmath}
+
+% table package
+\usepackage{multirow}
+
+% citation style
+\usepackage[square,sort,comma,numbers]{natbib}
+\usepackage{amsfonts}
+
+\usepackage{tikz,colortbl}
+\usetikzlibrary{calc}
+\usepackage{zref-savepos}
+
+\usepackage[bf,small,tableposition=top]{caption}
+\usepackage{subfig}
+\usepackage{float}
+\usepackage{url}
+
+\usepackage{listings}
+
+\definecolor{codegreen}{rgb}{0,0.6,0}
+\definecolor{codegray}{rgb}{0.5,0.5,0.5}
+\definecolor{codepurple}{rgb}{0.58,0,0.82}
+\definecolor{backcolour}{rgb}{0.95,0.95,0.92}
+
+\lstdefinestyle{mystyle}{
+    backgroundcolor=\color{backcolour},   
+    commentstyle=\color{codegreen},
+    keywordstyle=\color{magenta},
+    numberstyle=\tiny\color{codegray},
+    stringstyle=\color{codepurple},
+    basicstyle=\footnotesize,
+    breakatwhitespace=false,         
+    breaklines=true,                 
+    captionpos=b,                    
+    keepspaces=true,                 
+    numbers=left,                    
+    numbersep=5pt,                  
+    showspaces=false,                
+    showstringspaces=false,
+    showtabs=false,                  
+}
+
+\setlength\parindent{0pt} % no indent
+
+
+\lstset{style=mystyle}
+\begin{document}
+
+\input{cover_report.tex}
+\tableofcontents
+\newpage
+\listoffigures
+\newpage
+\listoftables
+\newpage
+% cover
+\setcounter{page}{1}
+\pagenumbering{arabic}
+
+\input{0.Abstract.tex}
+\newpage
+\input{1.Introduction.tex}
+\newpage
+\input{2.Methodology.tex}
+\newpage
+\input{3.Experiment.tex}
+\newpage
+\input{4.Discussions.tex}
+\newpage
+\input{5.Conclution.tex}
+\newpage
+\input{6.Reference.tex}
+
+\end{document}
