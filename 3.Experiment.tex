@@ -1,2 +1,84 @@
 \section{Experiment Result and Analysis}
-Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum. Nam quam nunc, blandit vel, luctus pulvinar, hendrerit id, lorem. Maecenas nec odio et ante tincidunt tempus. Donec vitae sapien ut libero venenatis faucibus. Nullam quis ante. Etiam sit amet orci eget eros faucibus tincidunt. Duis leo. Sed fringilla mauris sit amet nibh. Donec sodales sagittis magna. Sed consequat, leo eget bibendum sodales, augue velit cursus nunc, quis gravida magna mi a libero. Fusce vulputate eleifend sapien. Vestibulum purus quam, scelerisque ut, mollis sed, nonummy id, metus. Nullam accumsan lorem in dui. Cras ultricies mi eu turpis hendrerit fringilla. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; In ac dui quis mi consectetuer lacinia. Nam pretium turpis et arcu. Duis arcu tortor, suscipit eget, imperdiet nec, imperdiet iaculis, ipsum. Sed aliquam ultrices mauris. Integer ante arcu, accumsan a, consectetuer eget, posuere ut, mauris. Praesent adipiscing. Phasellus ullamcorper ipsum rutrum nunc. Nunc nonummy metus. Vestibulum volutpat pretium libero. Cras id dui. Aenean ut
+
+
+\subsection {Math Cheat Sheet}
+\begin{figure}
+\begin{center}
+    \begin{tikzpicture}
+        \begin{axis}
+            \addplot[color=red]{exp(x)};
+        \end{axis}
+    \end{tikzpicture}
+    \caption{Plot of Exponential Function.}
+    \label{fig:func1} % label must follow caption
+\end{center}
+\end{figure}
+
+
+
+\hskip 5pt
+
+\begin{figure}
+\begin{center}
+    \begin{tikzpicture}
+        \begin{axis}
+            \addplot3[
+                surf,
+            ]
+            {exp(-x^2-y^2)*x};
+        \end{axis}
+    \end{tikzpicture}
+    \caption{Plot of 3-D Function.}
+    \label{fig:func2}
+\end{center}
+\end{figure}
+
+\begin{figure} [h!] 
+    \centering
+        \begin{tikzpicture}
+        \centering
+        \begin{axis}[
+            axis lines = left,
+            xlabel = $x$,
+            ylabel = {$f(x)$},
+        ]
+        %Below the red parabola is defined
+        \addplot [
+            domain=-1:1, 
+            samples=100, 
+            color=red,
+        ]
+        {e^x};
+        \addlegendentry{$e^x$}
+        %Here the blue parabola is defined
+        \addplot [
+            domain=-1:1, 
+            samples=100, 
+            color=blue,
+            ]
+            {1/x^2}; % note that the syntax here is different
+        \addlegendentry{$\frac{1}{x^2}$}
+        \end{axis}
+        \end{tikzpicture}
+        \caption{Two functions in one plot.}
+        \label{fig:func3}
+\end{figure}
+
+\autoref{fig:func1}, \autoref{fig:func2}, and \autoref{fig:func3} are generated from function in \LaTeX. 
+
+
+\subsection{Table Cheat Sheet}
+
+\begin{table}[h]
+    \centering
+    \begin{tabular}{c|ccc}
+        & Apple & Oranges & Strawberries \\
+    \hline
+    A & 1 & 2 & 3\\
+    B & 1 & 2 & 3\\
+    C & 1 & 2 & 3\\
+    D & 1 & 2 & 3\\
+    \end{tabular}
+    \caption{Caption}
+    \label{tab:my_label}
+\end{table}

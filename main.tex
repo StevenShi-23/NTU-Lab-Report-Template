@@ -11,25 +11,31 @@
 \usepackage{tabularx}
 \onehalfspacing
 % maths symbols
-\usepackage{amsmath}
-
+\usepackage{amsmath, amsthm, amssymb,amsfonts}
+% plot math functions
+\usepackage{pgfplots}
+\pgfplotsset{width=8cm,compat=1.9} % suggested setting
 % table package
 \usepackage{multirow}
-
+% cross reference
+\usepackage{hyperref}
 % citation style
 \usepackage[square,sort,comma,numbers]{natbib}
-\usepackage{amsfonts}
-
 \usepackage{tikz,colortbl}
 \usetikzlibrary{calc}
 \usepackage{zref-savepos}
-
 \usepackage[bf,small,tableposition=top]{caption}
 \usepackage{subfig}
 \usepackage{float}
 \usepackage{url}
 
 \usepackage{listings}
+
+
+%%%%%% OPTIONAL
+% to freeze the location of image, you can \usepackage{float}
+% latex table generator : http://tablesgenerator.com/
+%%%%%%%
 
 \definecolor{codegreen}{rgb}{0,0.6,0}
 \definecolor{codegray}{rgb}{0.5,0.5,0.5}
@@ -82,7 +88,11 @@
 \input{4.Discussions.tex}
 \newpage
 \input{5.Conclution.tex}
+
+\pagenumbering{arabic}
+
 \newpage
-\input{6.Reference.tex}
+\bibliographystyle{acm}
+\bibliography{reference}
 
 \end{document}
